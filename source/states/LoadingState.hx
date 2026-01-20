@@ -552,7 +552,7 @@ class LoadingState extends MusicBeatState
 				prepare(imgs, snds, mscs);
 			}
 
-			songsToPrepare.push('$folder/Inst');
+			//songsToPrepare.push('$folder/Inst');
 
 			var player1:String = song.player1;
 			var player2:String = song.player2;
@@ -566,11 +566,11 @@ class LoadingState extends MusicBeatState
 			{
 				if(Paths.fileExists('$prefixVocals-Player.${Paths.SOUND_EXT}', SOUND, false, 'songs') && Paths.fileExists('$prefixVocals-Opponent.${Paths.SOUND_EXT}', SOUND, false, 'songs'))
 				{
-					songsToPrepare.push('$prefixVocals-Player');
-					songsToPrepare.push('$prefixVocals-Opponent');
+					//songsToPrepare.push('$prefixVocals-Player');
+					//songsToPrepare.push('$prefixVocals-Opponent');
 				}
-				else if(Paths.fileExists('$prefixVocals.${Paths.SOUND_EXT}', SOUND, false, 'songs'))
-					songsToPrepare.push(prefixVocals);
+				//else if(Paths.fileExists('$prefixVocals.${Paths.SOUND_EXT}', SOUND, false, 'songs'))
+				//	songsToPrepare.push(prefixVocals);
 			}
 
 			if (player2 != player1)
@@ -672,7 +672,7 @@ class LoadingState extends MusicBeatState
 		_startPool();
 		for (sound in soundsToPrepare) initThread(() -> preloadSound('sounds/$sound'), 'sound $sound');
 		for (music in musicToPrepare) initThread(() -> preloadSound('music/$music'), 'music $music');
-		for (song in songsToPrepare) initThread(() -> preloadSound(song, 'songs', true, false), 'song $song');
+		//for (song in songsToPrepare) initThread(() -> preloadSound(song, 'songs', true, false), 'song $song'); // not needed because of streaming :333
 
 		// for images, they get to have their own thread
 		for (image in imagesToPrepare) initThread(() -> preloadGraphic(image), 'image $image');
@@ -755,7 +755,7 @@ class LoadingState extends MusicBeatState
 	
 			if (prefixVocals != null && character.vocals_file != null && character.vocals_file.length > 0)
 			{
-				songsToPrepare.push(prefixVocals + "-" + character.vocals_file);
+				//songsToPrepare.push(prefixVocals + "-" + character.vocals_file);
 				if(char == PlayState.SONG.player1) dontPreloadDefaultVoices = true;
 			}
 		}
