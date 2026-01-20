@@ -212,10 +212,10 @@ class Paths
 		return returnSound('sounds/$key', modsAllowed);
 
 	inline static public function music(key:String, ?modsAllowed:Bool = true):Sound
-		return returnSound('music/$key', null, modsAllowed, true, true);
+		return returnSound('music/$key', null, modsAllowed);
 
 	inline static public function inst(song:String, ?modsAllowed:Bool = true):Sound
-		return returnSound('${formatToSongPath(song)}/Inst', 'songs', modsAllowed,true,true);
+		return returnSound('${formatToSongPath(song)}/Inst', 'songs', modsAllowed);
 
 	inline static public function voices(song:String, postfix:String = null, ?modsAllowed:Bool = true):Sound
 	{
