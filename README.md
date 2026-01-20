@@ -41,6 +41,7 @@ There you can learn how to use the 212 PlayState funcions in your mod!
 * Ezhalt - Pessy's Easter Egg Jingle.
 * MaliciousBunny - Video for the Final Update.
 * ShadzXD - thank you for allowing me to use ![this code edit (see link)](https://media.discordapp.net/attachments/1444223980381667388/1459818699346415649/image.png?ex=69712fdc&is=696fde5c&hm=fc5ae87f0e96f36bf48a4202843a185567e1745014ef1b61831da229b3595b58&=&format=webp&quality=lossless&width=1216&height=309)
+* UnholyWanderer04 - asked for it
 
 ***
 
