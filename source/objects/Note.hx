@@ -542,8 +542,8 @@ class Note extends FlxSprite
 		var strumAlpha:Float = myStrum.alpha;
 		var strumDirection:Float = myStrum.direction;
 
-		distance = (0.45 * (Conductor.songPosition - strumTime) * songSpeed * multSpeed);
-		if (!myStrum.downScroll)
+		distance = (0.45 * (strumTime - Conductor.songPosition) * songSpeed * multSpeed);
+		if (myStrum.downScroll)
 			distance *= -1;
 
 		var angleDir = strumDirection * Math.PI / 180;
@@ -576,6 +576,7 @@ class Note extends FlxSprite
 			{
 				scale.y = (Conductor.stepCrochet * 0.45 * songSpeed) / frameHeight;
 				updateHitbox();
+				offset.y = origin.y = 0;
 			}
 		}
 	}
